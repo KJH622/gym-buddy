@@ -1,0 +1,95 @@
+:root {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --bg: #f5efe7;
+  --text: #18231f;
+  --text-soft: #556761;
+  --muted: #7a8782;
+  --panel: rgba(251, 248, 243, 0.82);
+  --panel-solid: #fbf8f3;
+  --surface: rgba(255, 255, 255, 0.72);
+  --line: rgba(20, 58, 48, 0.1);
+  --line-strong: rgba(20, 92, 73, 0.14);
+  --chip: rgba(20, 92, 73, 0.08);
+  --accent: #156c57;
+  --accent-strong: #105643;
+  --accent-warm: #f07a35;
+  --shadow: 0 24px 64px rgba(41, 54, 49, 0.12);
+  background:
+    radial-gradient(circle at top, rgba(242, 126, 61, 0.12), transparent 22%),
+    linear-gradient(180deg, #fffaf4 0%, #eef1eb 100%);
+  color: var(--text);
+}
+
+:root[data-theme='dark'] {
+  --bg: #091411;
+  --text: #eef6f2;
+  --text-soft: #b0c2bb;
+  --muted: #8fa39b;
+  --panel: rgba(9, 23, 20, 0.82);
+  --panel-solid: #0b1c18;
+  --surface: rgba(17, 34, 30, 0.76);
+  --line: rgba(153, 212, 194, 0.12);
+  --line-strong: rgba(153, 212, 194, 0.18);
+  --chip: rgba(41, 157, 126, 0.12);
+  --accent: #2ca887;
+  --accent-strong: #97ead5;
+  --accent-warm: #f28b49;
+  --shadow: 0 28px 72px rgba(0, 0, 0, 0.32);
+  background:
+    radial-gradient(circle at top, rgba(242, 126, 61, 0.18), transparent 18%),
+    linear-gradient(180deg, #07100d 0%, #11211d 55%, #182a25 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.04), transparent 35%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(25, 128, 103, 0.025) 0,
+      rgba(25, 128, 103, 0.025) 2px,
+      transparent 2px,
+      transparent 16px
+    );
+  pointer-events: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
